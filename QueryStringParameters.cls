@@ -832,21 +832,21 @@ End Function
 ' Delete a value through a array keys associative
 '
 ' @param    {*}  keys            Array keys associative
-Public Function delete(ByVal keys)
+Public Function delete(ByVal arrayKeys)
 
-    If (isIterable(keys)) Then
-        For i = 0 To UBound(keys)
-            If (isValidKey(keys(i))) Then
-                keys(i) = keys(i) & ""
+    If (isIterable(arrayKeys)) Then
+        For i = 0 To UBound(arrayKeys)
+            If (isValidKey(arrayKeys(i))) Then
+                arrayKeys(i) = arrayKeys(i) & ""
             Else
-                throw invalidValueToAssing, "keys must be string or numeric, actual type: " & TypeName(keys(i))
+                throw invalidValueToAssing, "keys must be string or numeric, actual type: " & TypeName(arrayKeys(i))
             End If
         Next
     Else
         throw invalidValueToAssing, "specify a array keys!"
     End If
     
-    Set parse = removeLineageValueDictionary(parse, keys)
+    Set parse = removeLineageValueDictionary(parse, arrayKeys)
     
 End Function
 ''

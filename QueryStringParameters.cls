@@ -59,12 +59,12 @@ Const SEQUENTIAL_KEY = "____sequential_value____"
 ''
 ' Code to add how first value
 ' @var String
-Public addHowFirstValue As String
+Public addAsFirstValue As String
 
 ''
 ' Code to add how last value
 ' @var String
-Public addHowLastValue As String
+Public addAsLastValue As String
 
 ''
 ' Save parsed string query in object Collection
@@ -491,13 +491,13 @@ Private Function assingDictionary( _
 ) As dictionary
     
     Dim alreadyAdded As Boolean
-    after = IIf(after = "", addHowLastValue, after)
+    after = IIf(after = "", addAsLastValue, after)
     
     If (0 = UBound(keysToAssing)) Then
     
         Dim newDictionaryToAssing As New dictionary
         
-        If (after = addHowFirstValue) Then
+        If (after = addAsFirstValue) Then
             newDictionaryToAssing.add keysToAssing(0), value
             alreadyAdded = True
         End If
@@ -516,7 +516,7 @@ Private Function assingDictionary( _
             End If
         Next
         
-        If (after = addHowLastValue Or Not alreadyAdded) Then
+        If (after = addAsLastValue Or Not alreadyAdded) Then
             If (IsObject(value)) Then
                 newDictionaryToAssing.Item(keysToAssing(0)) = value
             Else
@@ -787,7 +787,7 @@ End Function
 ' @param    {*}  ?replacement    If not found, return this
 '
 ' @return   {*|Error(2015)}
-Public Function getValue(ByVal keys, Optional ByVal replacement = "&-1n4liD_%=r3PL4็3m3nt-&")
+Public Function getValue(ByVal keys, Optional ByVal replacement = "&-1n4liD_%=r3PL4รง3m3nt-&")
 
     Dim response As New dictionary
 
@@ -808,7 +808,7 @@ Public Function getValue(ByVal keys, Optional ByVal replacement = "&-1n4liD_%=r3
     
     If (IsObject(replacement)) Then
         haveReplacement = True
-    ElseIf (replacement <> "&-1n4liD_%=r3PL4็3m3nt-&") Then
+    ElseIf (replacement <> "&-1n4liD_%=r3PL4รง3m3nt-&") Then
         haveReplacement = False
     Else
         haveReplacement = True
@@ -910,6 +910,6 @@ End Function
 ''
 ' Initialize Class
 Private Sub Class_Initialize()
-    addHowFirstValue = "[___first_value___]"
-    addHowLastValue = "[___last_value___]"
+    addAsFirstValue = "[___first_value___]"
+    addAsLastValue = "[___last_value___]"
 End Sub

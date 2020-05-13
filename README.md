@@ -9,7 +9,7 @@ Microsoft Scripting Runtime
 
 ## How to use
 
-After import the file ([here](https://raw.githubusercontent.com/felipe-gustavo/QueryStringParameters/master/QueryStringParameters.cls)) to your VBA project, let's go to the examples.
+After import the file (download [here](https://github.com/felipe-gustavo/QueryStringParameters/archive/master.zip)) to your VBA project, let's go to the examples.
 
 Create a Object:
 ```vb

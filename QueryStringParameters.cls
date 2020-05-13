@@ -364,7 +364,7 @@ End Function
 ' @param    {string}    ?delimiter  delimiter used
 '
 ' @return   {string}
-Public Function escapeRegex(ByVal value As String, Optional ByVal demiliter As String)
+Private Function escapeRegex(ByVal value As String, Optional ByVal demiliter As String)
 
     If Htmlfile Is Nothing Then
         Set Htmlfile = CreateObject("htmlfile")

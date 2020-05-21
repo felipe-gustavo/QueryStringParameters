@@ -69,7 +69,7 @@ Public addAsLastValue As String
 ''
 ' Save parsed string query in object Collection
 ' @var \Dictionary
-Private parse As dictionary
+Private parse As New dictionary
 
 ''
 ' Regex Object
@@ -787,7 +787,7 @@ End Function
 ' @param    {*}  ?replacement    If not found, return this
 '
 ' @return   {*|Error(2015)}
-Public Function getValue(ByVal keys, Optional ByVal replacement = "&-1n4liD_%=r3PL4ç3m3nt-&")
+Public Function getValue(ByVal keys, Optional ByVal replacement = "&-1n4liD_%=r3PL4Ã§3m3nt-&")
 
     Dim response As New dictionary
 
@@ -808,7 +808,7 @@ Public Function getValue(ByVal keys, Optional ByVal replacement = "&-1n4liD_%=r3
     
     If (IsObject(replacement)) Then
         haveReplacement = True
-    ElseIf (replacement <> "&-1n4liD_%=r3PL4ç3m3nt-&") Then
+    ElseIf (replacement <> "&-1n4liD_%=r3PL4Ã§3m3nt-&") Then
         haveReplacement = False
     Else
         haveReplacement = True
@@ -907,6 +907,7 @@ End Function
 Private Function getRegexSequentialKey() As String
     getRegexSequentialKey = escapeRegex(SEQUENTIAL_KEY) & "__\d+__"
 End Function
+
 ''
 ' Initialize Class
 Private Sub Class_Initialize()

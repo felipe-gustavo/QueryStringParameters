@@ -21,27 +21,6 @@ Attribute VB_Exposed = False
 '
 
 ''
-' Code Thows
-Public Enum QueryStringParametersThrowsCode
-    
-    '' Invalid query string syntax
-    invalidQueryStringParameters = 3589
-    
-    '' Empty field in query string
-    emptyField = 3590
-    
-    '' Unknow error happened
-    unknowError = 3591
-    
-    '' Invalid value to assing a new key
-    invalidValueToAssing = 3592
-    
-    '' Value already exists
-    valueAlreadyExists = 3593
-    
-End Enum
-
-''
 ' This class name
 ' @var string
 Const className As String = "QueryStringParameters"
@@ -787,7 +766,7 @@ End Function
 ' @param    {*}  ?replacement    If not found, return this
 '
 ' @return   {*|Error(2015)}
-Public Function getValue(ByVal keys, Optional ByVal replacement = "&-1n4liD_%=r3PL4Ã§3m3nt-&")
+Public Function getValue(ByVal keys, Optional ByVal replacement = "&-1n4liD_%=r3PL4ç3m3nt-&")
 
     Dim response As New dictionary
 
@@ -808,7 +787,7 @@ Public Function getValue(ByVal keys, Optional ByVal replacement = "&-1n4liD_%=r3
     
     If (IsObject(replacement)) Then
         haveReplacement = True
-    ElseIf (replacement <> "&-1n4liD_%=r3PL4Ã§3m3nt-&") Then
+    ElseIf (replacement <> "&-1n4liD_%=r3PL4ç3m3nt-&") Then
         haveReplacement = False
     Else
         haveReplacement = True
